@@ -34,21 +34,22 @@ def exp(num1, num2):
 def main():
 	print("Welcome,")
 	operation = input("For operation press '+(add)','-(subtraction)','*(multiplication','/(divison)','^(exponential)'")
-	num1 = int(input ("Enter first number:"))
-	num2 = int(input ("Enter second number:"))
-
-	if(operation == '+'):
-		#dummy = add(num1, num2)
-		print ("Answer is ", add(num1, num2))
-	elif(operation == '-'):
-		print("Answer is ", sub(num1, num2))
-	elif(operation == '*'):
-		print("Answer is ", mul(num1, num2))
-	elif(operation == '/'):
-		print("Answer is ", div(num1, num2))
-	elif(operation == '^'):
-		print("Answer is ",exp(num1, num2))
+	if(operation != '+' and operation != '-' and operation != '*' and operation != '/' and operation != '^'):
+		print ("operation is wrong")
 	else:
-		print("Wrong Operation.")
-	
+		num1 = int(input ("Enter first number:"))
+		num2 = int(input ("Enter second number:"))
+
+		if(operation == '+'):
+			#dummy = add(num1, num2)
+			print ("Answer is ", add(num1, num2))
+		elif(operation == '-'):
+			print("Answer is ", sub(num1, num2))
+		elif(operation == '*'):
+			print("Answer is ", mul(num1, num2))
+		elif(operation == '/'):
+			print("Answer is ", div(num1, num2))
+		elif(operation == '^'):
+			print("Answer is ",exp(num1, num2))
+
 main()
